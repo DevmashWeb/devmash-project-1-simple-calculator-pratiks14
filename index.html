@@ -6,7 +6,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta charset="utf-8">
     <title>
-        Your Title here
+            Digital Calculator
     </title>
     <meta content="" name="description">
     <meta content="" name="author">
@@ -21,13 +21,75 @@
     <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link href="images/favicon.png" rel="icon" type="image/png">
+    <script>
+        function ac()
+        {
+            document.getElementById("disp").value="";
+        }  
+        function ce()
+        {
+            
+            var str=document.getElementById("disp").value;
+            str=str.substr(0,str.length-1);
+            document.getElementById("disp").value=str;
+        }
+        function addtext(val)
+        {
+            document.getElementById("disp").value+=val;     
+        }
+        function e()
+        {
+            try{if(document.getElementById("disp").value=="")
+                {
+                    document.getElementById("disp").value="no number";
+                    exit;
+                }
+            var result=eval(document.getElementById("disp").value);
+            document.getElementById("disp").value=result;
+        }
+            catch(e)
+                {
+                    document.activeElement.nodeValue="error";
+                }
+        }
+    </script>
+    
 </head>
 
-<body>
+<body style="background-color:black; position:fixed; left:100px;"><center>
     <!-- Content
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-
-
+<div class="container">
+    <h5><center>DIGITAL CALCULATOR</center></h5>
+    <hr>
+    <div class="display"><input type="text" style=" background-color:powderblue;border:solid 2px;" readonly size="20" id="disp"></div>
+    <hr>
+    <div class="buttons">
+        <p><input type="button" value="AC" style="background-color:crimson;"  onclick="ac()"></p>
+        <p><input type="button" value="CE" style="background-color:crimson;"  onclick="ce()"></p>
+        <hr>
+        <p><input  style="background-color:azure; color:black;"  style type="button" value="%" onclick="addtext('%')"></p>
+        <p><input  style="background-color:azure; color:black;"  type="button" id="div"  value="/" onclick="addtext('/')"></p>
+        <p><input  style="background-color:azure; color:black;"  type="button" id="one" value="1" onclick="addtext(one.value)"></p>
+        <p><input  style="background-color:azure; color:black;"  type="button" id="2" value="2" onclick="addtext('2')"</p>
+        <p><input style="background-color:azure; color:black;"  type="button" id="3" value="3" onclick="addtext('3')"></p>
+        <p><input style="background-color:azure; color:black;"  type="button" id="4" value="4" onclick="addtext('4')"></p>
+        <p><input style="background-color:azure; color:black;"  type="button" id="5" value="5" onclick="addtext('5')"></p>
+        <p><input style="background-color:azure; color:black;"  type="button" id="6" value="6" onclick="addtext('6')"></p>
+        <p><input style="background-color:azure; color:black;"  type="button" id="7" value="7" onclick="addtext('7')"></p>
+        <p><input style="background-color:azure; color:black;"  type="button" 
+    class="button black" value="8" onclick='addtext("8")'></p>
+        <p><input style="background-color:azure; color:black;"  type="button" id="9" value="9" onclick="addtext('9')"></p>
+        <p><input style="background-color:azure; color:black;"  type="button" id="0" value="0" onclick="addtext('0')"></p>
+        <p><input style="background-color:azure; color:black;"  type="button" id="+" value="+" onclick="addtext('+')"></p>
+        <p><input style="background-color:azure; color:black;"  type="button" id="-" value="-" onclick="addtext('-')"></p>
+        <p><input style="background-color:azure; color:black;"  type="button" id="*" value="*" onclick="addtext('*')"></p>
+        <p><input style="background-color:azure; color:black;"  type="button" id="." value="." onclick="addtext('.')"></p>
+        <p><input style="background-color:tan; color:black;"  style="background-color:brown" type="button" value="="
+                            onclick="e()"></p>
+    </div>
+    </div></center>
+    
     <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
