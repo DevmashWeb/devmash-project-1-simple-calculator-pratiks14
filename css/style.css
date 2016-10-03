@@ -1,1 +1,35 @@
 @import 'https://fonts.googleapis.com/css?family=Open+Sans';
+p
+{
+    display:inline;
+    padding:20px;
+    
+}
+
+.display
+{
+    display:inline;
+    margin:40px;
+    margin-top:10px;
+  
+   
+    
+}
+h5
+{
+    text-decoration: underline;
+    font-family: monospace;
+    color:sienna;
+   
+}
+input:active
+{
+background-color: aquamarine;
+border-top:black 2px solid;
+border-bottom:#ff4561 2px solid;
+}
+.num
+{
+    background-color: azure;
+    
+}
