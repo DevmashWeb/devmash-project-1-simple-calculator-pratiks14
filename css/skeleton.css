@@ -30,11 +30,14 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .container {
   position: relative;
-  width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 20px;
-  box-sizing: border-box; }
+  border-radius: 10px;
+  width: 50%;
+  max-width: 450px;
+  margin: 100px;
+  padding: 200px;
+  box-sizing: border-box;
+    background-color:gray;
+}
 .column,
 .columns {
   width: 100%;
@@ -44,7 +47,7 @@
 /* For devices larger than 400px */
 @media (min-width: 400px) {
   .container {
-    width: 85%;
+    width: 85;
     padding: 0; }
 }
 
